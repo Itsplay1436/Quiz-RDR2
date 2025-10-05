@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<!-- Declaração do tipo de documento HTML5 -->
+<html lang="pt-br">
+<!-- Define o idioma da página como português brasileiro -->
+<head>
+    <!-- Área de metadados e configurações da página -->
+    <meta charset="UTF-8">
+    <!-- Define a codificação de caracteres para suportar acentos e caracteres especiais -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Configura a viewport para responsividade em dispositivos móveis -->
+    <meta name="description" content="Quiz sobre Red Dead Redemption 2 - Responda as perguntas e teste seus conhecimentos">
+    <!-- Descrição específica para a página do quiz -->
+    <title>Quiz RDR2 - Jogo</title>
+    <!-- Título que aparece na aba do navegador -->
+    
+    <!-- Links para arquivos de estilo -->
+    <link rel="stylesheet" href="styles/fonte.css">
+    <!-- Estilos específicos para fontes personalizadas -->
+    <link rel="stylesheet" href="styles/estilo.css">
+    <!-- Arquivo principal de estilos -->
+    
+    <link rel="icon" href="assets/inicio/f6ad645a331d5e5e95938c1439ba385d.ico" type="image/x-icon">
+    <!-- Ícone da página (favicon) -->
+</head>
+
+<body>
+    <!-- Conteúdo visível da página -->
+    
+    <!-- Cabeçalho com menu de navegação -->
+    <header id="header">
+        <!-- Container para centralizar o conteúdo -->
+        <div class="container">
+            <!-- Barra de navegação principal -->
+            <div class="barra-navegacao">
+                <!-- Link para o site oficial do jogo -->
+                <a href="https://www.rockstargames.com/reddeadredemption2" target="_blank" aria-label="Site oficial do Red Dead Redemption 2">
+                    <!-- Logo do jogo -->
+                    <img src="assets/inicio/f6ad645a331d5e5e95938c1439ba385d.ico" alt="Logo Red Dead Redemption 2" class="logo">
+                </a>
+                
+                <!-- Menu de navegação -->
+                <nav>
+                    <ul class="menu">
+                        <!-- Item do menu para a página inicial -->
+                        <li><a href="index.html">Início</a></li>
+                        <!-- Item do menu para a página do quiz (ativo) -->
+                        <li><a href="quiz.html" class="ativo">Quiz</a></li>
+                        <!-- Item do menu para a página sobre -->
+                        <li><a href="sobre.html">Sobre</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Conteúdo principal da página -->
+    <main class="conteudo-principal">
+        <!-- Seção específica do quiz -->
+        <section class="quiz">
+            <div class="container">
+                <!-- Título principal do quiz -->
+                <h1>Quiz Red Dead Redemption 2</h1>
+                
+                <!-- Formulário que contém todas as perguntas -->
+                <form id="form-quiz">
+                    
+                    <!-- PRIMEIRA PERGUNTA -->
+                    <div class="pergunta">
+                        <!-- Número e texto da pergunta -->
+                        <h3>1. Em que ano o Red Dead Redemption II se passa?</h3>
+                        <!-- Lista de opções de resposta -->
+                        <ul class="opcoes">
+                            <!-- Opção A -->
+                            <li>
+                                <input type="radio" name="pergunta1" id="q1a" value="a">
+                                <label for="q1a">a) 1938</label>
+                            </li>
+                            <!-- Opção B (RESPOSTA CORRETA) -->
+                            <li>
+                                <input type="radio" name="pergunta1" id="q1b" value="b">
+                                <label for="q1b">b) 1899</label>
+                            </li>
+                            <!-- Opção C -->
+                            <li>
+                                <input type="radio" name="pergunta1" id="q1c" value="c">
+                                <label for="q1c">c) 1878</label>
+                            </li>
+                            <!-- Opção D -->
+                            <li>
+                                <input type="radio" name="pergunta1" id="q1d" value="d">
+                                <label for="q1d">d) 1961</label>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- SEGUNDA PERGUNTA -->
+                    <div class="pergunta">
+                        <h3>2. Como é o nome do personagem que o Arthur resgata no começo do jogo?</h3>
+                        <ul class="opcoes">
+                            <li>
+                                <input type="radio" name="pergunta2" id="q2a" value="a">
+                                <label for="q2a">a) John Marston</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="pergunta2" id="q2b" value="b">
+                                <label for="q2b">b) Micah Bell</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="pergunta2" id="q2c" value="c">
+                                <label for="q2c">c) Lenny</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="pergunta2" id="q2d" value="d">
+                                <label for="q2d">d) Leviticus Cornwall</label>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- TERCEIRA PERGUNTA -->
+                    <div class="pergunta">
+                        <h3>3. Qual a primeira cidade a se visitar no jogo?</h3>
+                        <ul class="opcoes">
+                            <li>
+                                <input type="radio" name="pergunta3" id="q3a" value="a">
+                                <label for="q3a">a) Saint Denis</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="pergunta3" id="q3b" value="b">
+                                <label for="q3b">b) Strawberry</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="pergunta3" id="q3c" value="c">
+                                <label for="q3c">c) Blackwater</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="pergunta3" id="q3d" value="d">
+                                <label for="q3d">d) Valentine</label>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- QUARTA PERGUNTA -->
+                    <div class="pergunta">
+                        <h3>4. Qual a causa da morte do Arthur?</h3>
+                        <ul class="opcoes">
+                            <li>
+                                <input type="radio" name="pergunta4" id="q4a" value="a">
+                                <label for="q4a">a) Hipotermia</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="pergunta4" id="q4b" value="b">
+                                <label for="q4b">b) Baleado</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="pergunta4" id="q4c" value="c">
+                                <label for="q4c">c) Velhice</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="pergunta4" id="q4d" value="d">
+                                <label for="q4d">d) Tuberculose</label>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- QUINTA PERGUNTA -->
+                    <div class="pergunta">
+                        <h3>5. Como era o nome da ilha que a gangue ficou no capítulo 5?</h3>
+                        <ul class="opcoes">
+                            <li>
+                                <input type="radio" name="pergunta5" id="q5a" value="a">
+                                <label for="q5a">a) Guarma</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="pergunta5" id="q5b" value="b">
+                                <label for="q5b">b) Cuba</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="pergunta5" id="q5c" value="c">
+                                <label for="q5c">c) Ilha de la Cruz</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="pergunta5" id="q5d" value="d">
+                                <label for="q5d">d) Havaí</label>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- SEXTA PERGUNTA -->
+                    <div class="pergunta">
+                        <h3>6. Quem foi o primeiro membro da gangue que John foi atrás no primeiro jogo?</h3>
+                        <ul class="opcoes">
+                            <li>
+                                <input type="radio" name="pergunta6" id="q6a" value="a">
+                                <label for="q6a">a) Javier Escuella</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="pergunta6" id="q6b" value="b">
+                                <label for="q6b">b) Bill Williamson</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="pergunta6" id="q6c" value="c">
+                                <label for="q6c">c) Dutch van der Linde</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="pergunta6" id="q6d" value="d">
+                                <label for="q6d">d) Jack Marston</label>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- SÉTIMA PERGUNTA -->
+                    <div class="pergunta">
+                        <h3>7. Quantos animais lendários caçáveis existem no jogo?</h3>
+                        <ul class="opcoes">
+                            <li>
+                                <input type="radio" name="pergunta7" id="q7a" value="a">
+                                <label for="q7a">a) 21</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="pergunta7" id="q7b" value="b">
+                                <label for="q7b">b) 25</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="pergunta7" id="q7c" value="c">
+                                <label for="q7c">c) 16</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="pergunta7" id="q7d" value="d">
+                                <label for="q7d">d) 19</label>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- OITAVA PERGUNTA -->
+                    <div class="pergunta">
+                        <h3>8. Quantos anos Arthur tinha durante o Red Dead Redemption II?</h3>
+                        <ul class="opcoes">
+                            <li>
+                                <input type="radio" name="pergunta8" id="q8a" value="a">
+                                <label for="q8a">a) 32</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="pergunta8" id="q8b" value="b">
+                                <label for="q8b">b) 29</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="pergunta8" id="q8c" value="c">
+                                <label for="q8c">c) 36</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="pergunta8" id="q8d" value="d">
+                                <label for="q8d">d) 27</label>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- NONA PERGUNTA -->
+                    <div class="pergunta">
+                        <h3>9. Com quem Arthur sai caçar o urso lendário?</h3>
+                        <ul class="opcoes">
+                            <li>
+                                <input type="radio" name="pergunta9" id="q9a" value="a">
+                                <label for="q9a">a) Dutch Van Der Linde</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="pergunta9" id="q9b" value="b">
+                                <label for="q9b">b) Charles Smith</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="pergunta9" id="q9c" value="c">
+                                <label for="q9c">c) Sadie Adler</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="pergunta9" id="q9d" value="d">
+                                <label for="q9d">d) Hosea Matthews</label>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- DÉCIMA PERGUNTA -->
+                    <div class="pergunta">
+                        <h3>10. Qual o nome da bebida alcoólica produzida em Lemoyne?</h3>
+                        <ul class="opcoes">
+                            <li>
+                                <input type="radio" name="pergunta10" id="q10a" value="a">
+                                <label for="q10a">a) Red Rye Whiskey</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="pergunta10" id="q10b" value="b">
+                                <label for="q10b">b) Moonshine</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="pergunta10" id="q10c" value="c">
+                                <label for="q10c">c) Old Crow Brandy</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="pergunta10" id="q10d" value="d">
+                                <label for="q10d">d) Black Prairie Bourbon</label>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Área de botões de ação -->
+                    <div class="acoes-quiz">
+                        <!-- Botão para limpar todas as respostas selecionadas -->
+                        <button type="button" id="limpar-respostas" class="botao botao-secundario">Limpar Respostas</button>
+                        <!-- Botão principal para ver os resultados -->
+                        <button type="button" id="ver-resultados" class="botao botao-principal">Ver Resultados</button>
+                    </div>
+                </form>
+                
+                <!-- Seção de resultados (inicialmente oculta) -->
+                <div id="resultado" class="resultado-escondido">
+                    <h2>Seu Resultado</h2>
+                    <!-- Exibe a pontuação do usuário -->
+                    <p id="pontuacao">Você acertou <span id="acertos">0</span> de 10 perguntas!</p>
+                    <!-- Área para mensagem personalizada baseada na pontuação -->
+                    <div id="mensagem-resultado"></div>
+                    <!-- Botão para tentar o quiz novamente -->
+                    <button type="button" id="tentar-novamente" class="botao botao-principal">Tentar Novamente</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Scripts JavaScript -->
+    <script src="js/menu.js"></script>
+    <!-- Script para funcionalidades do menu de navegação -->
+    <script src="js/quiz.js"></script>
+    <!-- Script com a lógica do quiz (cálculo de pontuação, validação, etc.) -->
+</body>
+</html>

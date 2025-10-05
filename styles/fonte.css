@@ -1,0 +1,44 @@
+@font-face {
+  /* 
+  Regra CSS especial para definir uma fonte personalizada que será baixada
+  e disponibilizada para uso na página web
+  */
+  
+  font-family: 'chineserocksrg';
+  /* 
+  Define o nome que será usado para referenciar esta fonte no CSS
+  Exemplo de uso: font-family: 'chineserocksrg', sans-serif;
+  O nome é uma escolha do desenvolvedor (não precisa ser o nome do arquivo)
+  */
+  
+  src: url('../fontes/chineserocksrg.otf') format('opentype');
+  /* 
+  Especifica a origem do arquivo da fonte:
+  - url('../fontes/chineserocksrg.otf'): Caminho relativo para o arquivo da fonte
+    * '../' sobe um nível na estrutura de diretórios
+    * 'fontes/' é a pasta onde o arquivo está localizado
+    * 'chineserocksrg.otf' é o nome do arquivo da fonte
+  - format('opentype'): Indica o formato do arquivo para o navegador
+    * OpenType (OTF) é um formato moderno e amplamente suportado
+  */
+  
+  font-weight: normal;
+  /* 
+  Define o "peso" (espessura) da fonte como normal (400)
+  Isso é útil quando se tem múltiplas variações da mesma fonte (light, bold, etc.)
+  */
+  
+  font-style: normal;
+  /* 
+  Define o estilo da fonte como normal (não itálico)
+  Se fosse itálico, usaria font-style: italic;
+  */
+  
+  font-display: swap;
+  /* 
+  Controla como a fonte será exibida durante o carregamento:
+  - swap: Exibe uma fonte alternativa imediatamente, depois troca quando a customizada carregar
+  - Evita FOIT (Flash of Invisible Text) - texto invisível durante o carregamento
+  - Melhora a percepção de performance para o usuário
+  */
+}

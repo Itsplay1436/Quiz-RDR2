@@ -1,0 +1,533 @@
+/**
+ * QUIZ RED DEAD REDEMPTION 2 - estilo.css
+ * Arquivo principal de estilização do projeto
+ * Define a aparência visual de todas as páginas do quiz
+ * Tema inspirado no universo de Red Dead Redemption 2
+ */
+
+/* ===== RESET E CONFIGURAÇÕES BÁSICAS ===== */
+/**
+ * Reset CSS para garantir consistência entre navegadores
+ * Remove margens, paddings padrão e define box-model consistente
+ */
+* {
+  margin: 0;          /* Remove todas as margens padrão */
+  padding: 0;         /* Remove todos os paddings padrão */
+  box-sizing: border-box; /* Inclui padding e border no cálculo de width/height */
+}
+
+/**
+ * Configuração de scroll suave para toda a página
+ * Animações suaves ao navegar com links âncora ou JavaScript
+ */
+html {
+  scroll-behavior: smooth; /* Transição suave ao rolar a página */
+}
+
+/**
+ * Estilos base do corpo da página
+ * Define o tema visual principal do site
+ */
+body {
+  background-color: #5c161c; /* Vermelho vinho escuro - tema RDR2 */
+  color: #fff;               /* Texto branco para contraste */
+  font-family: Arial, Helvetica, sans-serif; /* Fonte padrão de fallback */
+  line-height: 1.6;          /* Espaçamento entre linhas para melhor legibilidade */
+}
+
+/**
+ * Container principal para centralização de conteúdo
+ * Define largura máxima e centralização horizontal
+ */
+.container {
+  max-width: 1200px;   /* Largura máxima do conteúdo */
+  margin: 0 auto;      /* Centraliza horizontalmente */
+  padding: 0 20px;     /* Padding lateral para respiro em telas menores */
+}
+
+/* ===== TIPOGRAFIA ===== */
+/**
+ * Estilos para todos os cabeçalhos (h1 até h6)
+ * Define a fonte personalizada com fallbacks para compatibilidade
+ */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'chineserocksrg', 'Arial Black', 'Impact', Helvetica, sans-serif;
+  margin-bottom: 1rem;     /* Espaçamento inferior consistente */
+  font-weight: normal;     /* Remove negrito padrão dos navegadores */
+}
+
+/**
+ * Estilos específicos para cada nível de cabeçalho
+ * Hierarquia visual clara com tamanhos decrescentes
+ */
+h1 {
+  font-size: 2.5rem;    /* ≈40px - Título principal maior */
+  text-align: center;   /* Centralização para destaque */
+}
+
+h2 {
+  font-size: 2rem;      /* ≈32px - Subtítulos */
+}
+
+h3 {
+  font-size: 1.5rem;    /* ≈24px - Títulos de seção */
+}
+
+/* ===== HEADER E NAVEGAÇÃO ===== */
+/**
+ * Cabeçalho fixo no topo da página
+ * Permanece visível durante a rolagem
+ */
+header {
+  width: 100%;          /* Ocupa toda a largura da tela */
+  position: fixed;      /* Fixo no topo da janela */
+  top: 0;               /* Alinhado ao topo */
+  left: 0;              /* Alinhado à esquerda */
+  transition: .5s;      /* Transição suave para efeitos */
+  z-index: 1000;        /* Garante que fique acima de outros elementos */
+  padding: 10px 0;      /* Espaçamento vertical interno */
+}
+
+/**
+ * Estado do header quando a página é rolada (efeito JavaScript)
+ * Muda a cor de fundo e adiciona sombra para destaque
+ */
+header.roll {
+  background-color: #c41b34; /* Vermelho mais vibrante */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Sombra sutil para profundidade */
+}
+
+/**
+ * Container flexbox para organização dos elementos do header
+ * Alinha logo e menu horizontalmente com espaço entre eles
+ */
+.barra-navegacao {
+  display: flex;                    /* Layout flexível */
+  align-items: center;             /* Centraliza verticalmente */
+  justify-content: space-between;  /* Espaço entre logo e menu */
+}
+
+/**
+ * Estilo da logo no header
+ * Dimensões fixas para consistência visual
+ */
+.logo {
+  height: 55px;   /* Altura fixa */
+  width: 75px;    /* Largura fixa */
+}
+
+/**
+ * Estilização da lista de navegação
+ * Remove marcadores padrão e define layout flex
+ */
+.menu {
+  list-style-type: none; /* Remove bolinhas/marcadores */
+  display: flex;         /* Itens em linha horizontal */
+}
+
+.menu li {
+  margin: 0 20px;        /* Espaçamento horizontal entre itens */
+}
+
+/**
+ * Estilos dos links de navegação
+ * Combina estética western com boa usabilidade
+ */
+.menu a {
+  color: #fff;                    /* Texto branco */
+  text-decoration: none;          /* Remove sublinhado */
+  font-family: 'chineserocksrg', 'Arial Black', 'Impact', Helvetica, sans-serif;
+  font-size: 30px;               /* Tamanho grande para destaque */
+  transition: color 0.3s;        /* Transição suave para hover */
+  font-weight: normal;           /* Peso normal da fonte */
+}
+
+/**
+ * Estados de interação dos links de navegação
+ * Feedback visual para usuário
+ */
+.menu a:hover, .menu a.ativo {
+  color: #f0e8e7;                /* Branco levemente acinzentado */
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Brilho sutil */
+}
+
+/* ===== CONTEÚDO PRINCIPAL ===== */
+/**
+ * Espaço reservado para o conteúdo abaixo do header fixo
+ * Compensa a altura do header para evitar sobreposição
+ */
+.conteudo-principal {
+  margin-top: 80px;              /* Altura aproximada do header */
+  min-height: calc(100vh - 80px); /* Altura mínima: viewport menos header */
+}
+
+/* ===== BANNER/HOME PAGE ===== */
+/**
+ * Seção banner da página inicial
+ * Layout centralizado com altura controlada
+ */
+.banner {
+  display: flex;
+  justify-content: center;    /* Centraliza horizontalmente */
+  align-items: center;        /* Centraliza verticalmente */
+  height: 80vh;               /* 80% da altura da tela */
+}
+
+/**
+ * Container para imagem com texto sobreposto
+ * Posicionamento relativo para elementos absolutos internos
+ */
+.imagem-com-texto {
+  position: relative;         /* Permite posicionamento absoluto dos filhos */
+  display: inline-block;      /* Ajusta ao conteúdo */
+  text-align: center;         /* Centraliza conteúdo */
+}
+
+/**
+ * Estilo da imagem do cartaz no banner
+ */
+.imagem-com-texto img {
+  max-width: 100%;           /* Responsiva - não ultrapassa container */
+  height: auto;              /* Mantém proporção original */
+  display: block;            /* Remove espaço inferior padrão */
+  border-radius: 10px;       /* Cantos arredondados suaves */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); /* Sombra para profundidade */
+}
+
+/**
+ * Texto posicionado sobre a imagem do banner
+ * Centralizado vertical e horizontalmente
+ */
+.texto-sobre-imagem {
+  position: absolute;         /* Posiciona sobre a imagem */
+  top: 47%;                  /* Posicionamento vertical */
+  left: 50%;                 /* Posicionamento horizontal */
+  transform: translate(-50%, -50%); /* Correção para centralização perfeita */
+  color: white;              /* Texto branco para contraste */
+  text-align: center;        /* Alinhamento central */
+  width: 100%;               /* Largura total do container */
+}
+
+/**
+ * Título principal sobre a imagem
+ * Estilo inspirado em cartazes western
+ */
+.texto-sobre-imagem h2 {
+  font-family: 'chineserocksrg', Helvetica, sans-serif;
+  font-size: 24px;           /* Tamanho legível */
+  color: #721c11;            /* Vermelho escuro western */
+  margin: 0;                 /* Remove margem padrão */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Sombra para legibilidade */
+  font-weight: bold;         /* Destaque visual */
+}
+
+/**
+ * Botão "JOGAR" sobre a imagem
+ * Estilo minimalista como no design original
+ */
+.texto-sobre-imagem2 {
+  position: absolute;
+  top: 62%;                  /* Posição abaixo do título */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'chineserocksrg', Helvetica, sans-serif;
+  font-size: 40px;           /* Tamanho grande para destaque */
+  color: rgb(192, 22, 0);    /* Vermelho vibrante */
+  text-decoration: none;     /* Remove sublinhado */
+  background: none;          /* Sem fundo - estilo minimalista */
+  border: none;              /* Sem borda */
+  padding: 0;                /* Sem padding */
+  cursor: pointer;           /* Indica elemento clicável */
+  font-weight: bold;         /* Destaque visual */
+}
+
+/**
+ * Estado hover do botão JOGAR
+ * Mantém aparência minimalista sem alterações drásticas
+ */
+.texto-sobre-imagem2:hover {
+  background: none;          /* Mantém sem fundo */
+  transform: translate(-50%, -50%); /* Mantém posição */
+  color: rgb(192, 22, 0);   /* Mantém cor original */
+}
+
+/* ===== PÁGINA SOBRE ===== */
+/**
+ * Seção "Sobre Nós" - Apresentação da equipe
+ */
+.sobre-nos {
+  padding: 50px 0;          /* Espaçamento vertical generoso */
+}
+
+/**
+ * Container flexível para os membros da equipe
+ * Layout responsivo com quebra de linha
+ */
+.equipe {
+  display: flex;
+  flex-wrap: wrap;          /* Permite quebra em múltiplas linhas */
+  justify-content: center;  /* Centraliza horizontalmente */
+  gap: 30px;                /* Espaçamento entre membros */
+  margin-top: 40px;         /* Espaço acima da equipe */
+}
+
+/**
+ * Container individual para cada membro da equipe
+ */
+.membro {
+  text-align: center;       /* Conteúdo centralizado */
+  max-width: 200px;         /* Largura máxima consistente */
+}
+
+/**
+ * Container para controle do tamanho e corte das imagens
+ * Garante que todas as fotos tenham dimensões iguais
+ */
+.membro-imagem-container {
+  width: 150px;             /* Largura fixa quadrada */
+  height: 150px;            /* Altura fixa quadrada */
+  margin: 0 auto 15px auto; /* Centraliza e espaça abaixo */
+  display: flex;
+  align-items: flex-start;  /* Corta da parte inferior se necessário */
+  justify-content: center;  /* Centraliza horizontalmente */
+  overflow: hidden;         /* Esconde partes excedentes da imagem */
+}
+
+/**
+ * Estilo das imagens dos membros
+ * Garante preenchimento uniforme do container
+ */
+.membro img {
+  width: 100%;              /* Preenche container horizontalmente */
+  height: 100%;             /* Preenche container verticalmente */
+  object-fit: cover;        /* Corta imagem para preencher container */
+  object-position: center top; /* Foca no topo da imagem */
+}
+
+/**
+ * Nome dos membros da equipe
+ */
+.membro h3 {
+  font-size: 1.2rem;        /* Tamanho legível */
+  margin-bottom: 5px;       /* Espaço antes do email */
+}
+
+/**
+ * Email dos membros da equipe
+ */
+.membro p {
+  font-size: 0.9rem;        /* Tamanho menor que o nome */
+  color: #f0e8e7;           /* Cinza claro para hierarquia visual */
+}
+
+/* ===== PÁGINA QUIZ ===== */
+/**
+ * Seção principal do quiz
+ */
+.quiz {
+  padding: 30px 0;          /* Espaçamento vertical */
+}
+
+/**
+ * Container de cada pergunta do quiz
+ * Design com tema western
+ */
+.pergunta {
+  background-color: rgba(0, 0, 0, 0.3); /* Fundo semi-transparente */
+  padding: 20px;            /* Espaçamento interno */
+  margin-bottom: 20px;      /* Espaço entre perguntas */
+  border-radius: 8px;       /* Cantos arredondados */
+  border-left: 4px solid #c41b34; /* Destaque lateral vermelho */
+}
+
+/**
+ * Lista de opções de resposta
+ */
+.opcoes {
+  list-style-type: none;    /* Remove marcadores */
+  margin-top: 15px;         /* Espaço acima das opções */
+}
+
+.opcoes li {
+  margin-bottom: 10px;      /* Espaço entre opções */
+}
+
+/**
+ * Estilo dos radio buttons
+ */
+.opcoes input[type="radio"] {
+  margin-right: 10px;       /* Espaço entre radio e label */
+}
+
+/**
+ * Labels das opções de resposta
+ */
+.opcoes label {
+  cursor: pointer;          /* Indica elemento clicável */
+  transition: color 0.3s;   /* Transição suave ao passar mouse */
+}
+
+.opcoes label:hover {
+  color: #f0e8e7;          /* Mudança de cor no hover */
+}
+
+/**
+ * Container dos botões de ação do quiz
+ */
+.acoes-quiz {
+  display: flex;
+  justify-content: center;  /* Centraliza botões */
+  gap: 20px;                /* Espaço entre botões */
+  margin-top: 40px;         /* Espaço acima dos botões */
+}
+
+/**
+ * Estilo base para todos os botões
+ */
+.botao {
+  font-family: 'chineserocksrg', Helvetica, sans-serif;
+  font-size: 24px;          /* Tamanho legível */
+  padding: 10px 30px;       /* Espaçamento interno confortável */
+  border: none;             /* Remove borda padrão */
+  border-radius: 5px;       /* Cantos levemente arredondados */
+  cursor: pointer;          /* Indica elemento clicável */
+  transition: all 0.3s;     /* Transição suave para todas as propriedades */
+}
+
+/**
+ * Botão primário (Ver Resultados/Tentar Novamente)
+ */
+.botao-principal {
+  background-color: #c41b34; /* Vermelho tema RDR2 */
+  color: white;              /* Texto branco */
+}
+
+.botao-principal:hover {
+  background-color: #a0152a; /* Vermelho mais escuro no hover */
+  transform: scale(1.05);    /* Efeito de crescimento sutil */
+}
+
+/**
+ * Botão secundário (Limpar Respostas)
+ */
+.botao-secundario {
+  background-color: #333;    /* Cinza escuro */
+  color: white;              /* Texto branco */
+}
+
+.botao-secundario:hover {
+  background-color: #555;    /* Cinza mais claro no hover */
+  transform: scale(1.05);    /* Efeito de crescimento sutil */
+}
+
+/* ===== SEÇÃO DE RESULTADOS ===== */
+/**
+ * Container dos resultados (inicialmente escondido)
+ */
+.resultado-escondido {
+  display: none;            /* Oculta inicialmente */
+  text-align: center;       /* Conteúdo centralizado */
+  margin-top: 40px;         /* Espaço acima */
+  padding: 30px;            /* Espaçamento interno */
+  background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+  border-radius: 10px;      /* Cantos arredondados */
+}
+
+/**
+ * Texto da pontuação
+ */
+#pontuacao {
+  font-size: 1.5rem;        /* Tamanho destacado */
+  margin: 20px 0;           /* Espaçamento vertical */
+}
+
+/**
+ * Mensagem personalizada do resultado
+ */
+#mensagem-resultado {
+  font-size: 1.2rem;        /* Tamanho legível */
+  margin: 20px 0;           /* Espaçamento vertical */
+  font-style: italic;       /* Estilo itálico para destaque */
+}
+
+/* ===== RESPONSIVIDADE ===== */
+/**
+ * Media Query para tablets e telas menores (max-width: 768px)
+ */
+@media (max-width: 768px) {
+  .barra-navegacao {
+    flex-direction: column;   /* Empilha logo e menu verticalmente */
+    text-align: center;       /* Centraliza conteúdo */
+  }
+  
+  .menu {
+    margin-top: 15px;         /* Espaço acima do menu */
+    flex-direction: column;   /* Itens do menu em coluna */
+  }
+  
+  .menu li {
+    margin: 10px 0;           /* Espaçamento vertical entre itens */
+  }
+  
+  .equipe {
+    flex-direction: column;   /* Membros em coluna única */
+    align-items: center;      /* Centraliza membros */
+  }
+  
+  .acoes-quiz {
+    flex-direction: column;   /* Botões em coluna */
+    align-items: center;      /* Centraliza botões */
+  }
+  
+  .botao {
+    width: 100%;              /* Botões ocupam largura total */
+    max-width: 300px;         /* Largura máxima controlada */
+    margin-bottom: 10px;      /* Espaço entre botões */
+  }
+  
+  .texto-sobre-imagem h2 {
+    font-size: 18px;          /* Reduz tamanho do texto */
+  }
+  
+  .texto-sobre-imagem2 {
+    font-size: 30px;          /* Reduz tamanho do botão */
+  }
+  
+  .banner {
+    height: 60vh;             /* Reduz altura do banner */
+  }
+}
+
+/**
+ * Media Query para smartphones (max-width: 480px)
+ */
+@media (max-width: 480px) {
+  .texto-sobre-imagem h2 {
+    font-size: 16px;          /* Tamanho ainda menor */
+  }
+  
+  .texto-sobre-imagem2 {
+    font-size: 24px;          /* Botão menor */
+  }
+  
+  .menu a {
+    font-size: 20px;          /* Links de navegação menores */
+  }
+  
+  .logo {
+    height: 45px;             /* Logo menor */
+    width: 60px;
+  }
+}
+
+/**
+ * Garantia de fonte específica para elementos críticos
+ * Fallback robusto para caso da fonte personalizada não carregar
+ */
+.texto-sobre-imagem h2,
+.texto-sobre-imagem2,
+.botao,
+.membro h3 {
+  font-family: 'chineserocksrg', 'Arial Black', 'Impact', Helvetica, sans-serif;
+  font-weight: normal;
+}

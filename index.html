@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!-- Declaração do tipo de documento como HTML5 -->
+<html lang="pt-br">
+<!-- Elemento raiz do documento, definindo o idioma como português brasileiro -->
+<head>
+    <!-- Cabeçalho do documento - contém metadados e links para recursos externos -->
+    <meta charset="UTF-8">
+    <!-- Define a codificação de caracteres como UTF-8 para suportar caracteres especiais -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Configura a viewport para responsividade em dispositivos móveis -->
+    <meta name="description" content="Quiz sobre Red Dead Redemption 2 - Teste seus conhecimentos sobre o jogo">
+    <!-- Meta descrição para SEO (Otimização para Motores de Busca) -->
+    <title>Quiz RDR2 - Início</title>
+    <!-- Título da página que aparece na aba do navegador -->
+    
+    <!-- Links para folhas de estilo CSS -->
+    <link rel="stylesheet" href="styles/fonte.css">
+    <!-- Provavelmente contém definições de fontes personalizadas -->
+    <link rel="stylesheet" href="styles/estilo.css">
+    <!-- Arquivo principal de estilos para a página -->
+    
+    <link rel="icon" href="assets/inicio/f6ad645a331d5e5e95938c1439ba385d.ico" type="image/x-icon">
+    <!-- Define o ícone da página (favicon) -->
+</head>
+
+<body>
+    <!-- Corpo do documento - conteúdo visível da página -->
+    <header id="header">
+        <!-- Cabeçalho da página contendo logo e menu de navegação -->
+        <div class="container">
+            <!-- Container provavelmente usado para centralizar o conteúdo -->
+            <div class="barra-navegacao"> 
+                <!-- Divisão específica para a barra de navegação -->
+                <a href="https://www.rockstargames.com/reddeadredemption2" target="_blank" aria-label="Site oficial do Red Dead Redemption 2">
+                    <!-- Link externo para o site oficial do jogo -->
+                    <img src="assets/inicio/f6ad645a331d5e5e95938c1439ba385d.ico" alt="Logo Red Dead Redemption 2" class="logo">
+                    <!-- Imagem do logo com texto alternativo para acessibilidade -->
+                </a>
+                <nav>
+                    <!-- Elemento semântico para navegação -->
+                    <ul class="menu">
+                        <!-- Lista não ordenada para os itens do menu -->
+                        <li><a href="index.html" class="ativo">Início</a></li>
+                        <!-- Item do menu para a página inicial, com classe "ativo" indicando página atual -->
+                        <li><a href="quiz.html">Quiz</a></li>
+                        <!-- Link para a página do quiz -->
+                        <li><a href="sobre.html">Sobre</a></li>
+                        <!-- Link para a página "Sobre" -->
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <main class="conteudo-principal">
+        <!-- Elemento semântico para o conteúdo principal da página -->
+        <section class="banner">
+            <!-- Seção do banner principal -->
+            <div class="container">
+                <!-- Outro container para centralização -->
+                <div class="imagem-com-texto">
+                    <!-- Divisão que combina imagem e texto sobreposto -->
+                    <img src="assets/inicio/269490-fundo-de-cartaz-ocidental-procurado-vetor.jpg" alt="Cartaz de procurado do Velho Oeste">
+                    <!-- Imagem de fundo com tema de Velho Oeste -->
+                    <div class="texto-sobre-imagem">
+                        <!-- Container para texto sobreposto à imagem -->
+                        <h2><b>Você consegue provar que é o gatilho mais rápido do oeste?</b></h2>
+                        <!-- Título chamativo com formatação em negrito -->
+                    </div>
+                    <a href="quiz.html" class="texto-sobre-imagem2"><b>JOGAR</b></a>
+                    <!-- Botão/link para iniciar o quiz -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/menu.js"></script>
+    <!-- Inclusão de script JavaScript para funcionalidades do menu -->
+</body>
+</html>
